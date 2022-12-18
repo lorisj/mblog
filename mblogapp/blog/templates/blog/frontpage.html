@@ -1,19 +1,37 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-  Home |
+  Home | Mblog
 {% endblock %}
 
 {% block content %}
-  <h1>Front page</h1>
+  <h1>Front page for mblog</h1>
 
+ 
+  <h2>Search through notes</h2>
+  <section class="hero is-small">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-2">Search through notes</h1>
+      <div id="hero-input-group" class="field has-addons has-addons-centered">
+      <div class="control">
+          <input class="input is-medium" type="text" placeholder="Search..." />
+        </div>
+        <div class="control">
+          <a class="button is-medium is-primary"><i class="fal fa-search"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>  
 
+  
+
+  
   <section class="featured">
     
     <div class="level">
       <div class="level-left">
         <div class="level-item">
-          <h2 class="subtitle">Featured Math blocks</h2>
+          <h2 class="subtitle">Recent Math blocks</h2>
         </div>
       </div>
       <div class="level-right">
@@ -38,36 +56,26 @@
       
       {% for mblock in featured_Mblocks %}
       <div class="column is-3">
-        <a href="{% url 'mblock_detail' mblock.slug%}">
+        <a href="{% url 'mblock_detail' mblock.slug %}">
           <figure class="image is-5by3">
             <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" />
           </figure>
-
-          <h2 class="subtitle">{{mblock.title}}</h2>
-          <span class="tag is-rounded">Type: {{mblock.type}}</span>
-          <span class="tag is-rounded">Topics: Add topics to model</span>
+          <h2 class="subtitle">{{mblock}}</h2>
         </a>
-        <p>{{mblock.preview_text}}</p>
+          <p>{{mblock.preview_text}}</p>
+        
+          <a href="{% url 'mblock_detail' mblock.type %}">
+          <span class="tag is-rounded">Type: {{mblock.type}}</span> </a>
+          <span class="tag is-rounded">Topics: Add topics to model</span>
+        
+        
       </div>
       {% endfor %}  
       
       
     </div>
   </section>
-<!--
-  <section class="hero is-medium">
-    <div class="hero-body has-text-centered">
-      <h1 class="title is-2">Thoughts, stories, and ideas.</h1>
-      <div id="hero-input-group" class="field has-addons has-addons-centered">
-      <div class="control">
-          <input class="input is-medium" type="text" placeholder="Search..." />
-        </div>
-        <div class="control">
-          <a class="button is-medium is-primary"><i class="fal fa-search"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>  
-//-->
+
+
 
 {% endblock %}

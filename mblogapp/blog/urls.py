@@ -1,7 +1,10 @@
 from django.urls import path
 
-from . import views
+from .views import detail, frontpage
+
 
 urlpatterns = [
-    path("<slug:slug_in>/", views.detail, name="mblock_detail"),
+    #path("", frontpage, name="frontpage"),
+    path("", frontpage, name="frontpage"),
+    path("<slug:slug_in>/", detail, name="mblock_detail"),
 ]

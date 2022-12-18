@@ -18,7 +18,7 @@ from django.urls import path, include
 
 
 #Core:
-from core.views import frontpage
+
 from core.views import about
 
 
@@ -28,5 +28,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("about/", about, name="about"),
     path("mblog/", include("blog.urls")),
-    path("mblog", frontpage, name="frontpage"),
+    
 ]
