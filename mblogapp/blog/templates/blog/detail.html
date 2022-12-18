@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{%block title%} {{mathblock.title}} | {% endblock %}
+
+
+{% block content %}
+<h1>{{mathblock.title}}</h1>
+
+<h2> Introduction </h2>
+{{mathblock.preview_text}}
+
+<h2> Body </h2>
+{{mathblock.body}}
+{% endblock %}

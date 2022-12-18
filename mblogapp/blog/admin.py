@@ -2,6 +2,6 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Block
+from .models import Mblock
 
-admin.site.register(Block)
+admin.site.register(Mblock)
