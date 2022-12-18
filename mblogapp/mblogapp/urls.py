@@ -16,6 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+
+#Core:
+from core.views import frontpage
+from core.views import about
+
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("about/", about, name="about"),
+    path("", frontpage, name="frontpage"),
 ]

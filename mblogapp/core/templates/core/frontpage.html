@@ -1,0 +1,70 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+  Home |
+{% endblock %}
+
+{% block content %}
+  <h1>Front page</h1>
+
+
+  <section class="featured">
+    <h2 class="subtitle">Featured Articles</h2>
+    <div class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <h2 class="subtitle">Featured Articles</h2>
+        </div>
+      </div>
+      <div class="level-right">
+        <div class="level-item">
+          <div class="field has-addons has-addons-centered">
+            <div class="control">
+              <a class="button is-small" disabled>
+                <i class="far fa-chevron-left"></i>
+              </a>
+            </div>
+            <div class="control">
+              <a class="button is-small">
+                <i class="far fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns">
+      
+      {% for block in featured_blocks %}
+      <div class="column is-3">
+        <article>
+          <figure class="image is-5by3">
+            <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" />
+          </figure>
+          <h2 class="subtitle">{{block.title}}</h2>
+          <span class="tag is-rounded">Users & Groups</span>
+        </article>
+      </div>
+      {% endfor %}  
+      
+      
+    </div>
+  </section>
+<!--
+  <section class="hero is-medium">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-2">Thoughts, stories, and ideas.</h1>
+      <div id="hero-input-group" class="field has-addons has-addons-centered">
+        <div class="control">
+          <input class="input is-medium" type="text" placeholder="Search..." />
+        </div>
+        <div class="control">
+          <a class="button is-medium is-primary"><i class="fal fa-search"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+//-->
+
+{% endblock %}
