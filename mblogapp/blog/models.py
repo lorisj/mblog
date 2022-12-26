@@ -8,6 +8,7 @@ class Mblock(models.Model):
         ('Def', 'Definition'),
         ('Res', 'Result'),
         ('Exp', 'Example'),
+        ('Prp', 'Property'),
     )
     title = models.CharField(max_length=255)
     slug = models.SlugField() # internet adress 
