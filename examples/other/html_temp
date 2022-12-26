@@ -1,0 +1,20 @@
+align function:
+
+HTML:
+<table>
+  <tr>
+    <th>A</th>
+    <th>=</th>
+    <th>2323132</th>
+  </tr>
+    <tr>
+    <th></th>
+    <th>=</th>
+    <th>2323132</th>
+  </tr>
+</table>
+
+CSS:
+tr, th, table {
+  font-weight: unset;
+}
