@@ -1,4 +1,4 @@
-# mblog
+# Math blog (mblog)
 
 ## Introduction
 This project is meant to be a new way of taking notes for math, focusing on being fast to write, but also on having organization tools built in to make the computer able to somewhat understand what you are writing about. 
