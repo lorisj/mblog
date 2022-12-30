@@ -1,0 +1,63 @@
+%title: Category Theory Fundamentals
+%date:12/22/2022 
+%imports: 
+%bib[1]: A functional Model theory by Cyrus F. Nourani
+%bib[2]: An Introduction to Category Theory by Harold Simmons
+intro:
+    This note covers basic definitions and results of category theory.
+
+
+%def:category
+def:Category
+    A category $C$ consists of
+    -) A class $\ob(C)$ consisting of objects
+    -) A A class $\hom(M)$ of morphisms.
+        %//Because def:Morphism is in def:Category, replace def:morphism with def(def:category):morphism
+        %def:morphism
+        def:Morphism
+            A morphism is any object that has a source object $A \in \ob(C)$ and a target $B \in \ob(C)$. Morphisms are sometimes called arrows. 
+            
+            If $f$ is a morphism with source $A \in \ob(C)$ and target $B \in \ob(C)$, then this is usually written as $f:A \to B$. 
+            
+            
+    -) A binary operation $\cdot : M \to M$, called composition, which satisfies:
+        1) $\cdot$ is associative
+        %def(def:morphism):identity morphism
+        2) For every object $A \in \ob(C)$, there exists an identity morphism $1_A : A \to A$, such that for every morphism $f:A \to B$:
+            neq:
+                f \circ 1_A = f = 1_B \circ f  
+
+
+
+        
+%res(def:morphism):unique identity
+res:Unique identity
+    Identity morphisms in a category are unique.
+
+    proof:
+        Consider an object $A$ with two identity morphisms $f, g : A \to A$. Then note $f = f \circ g = g$. 
+
+
+%def(def:morphism):hom-class
+def:Hom-class
+    Let $C$ be a category. Let $A,B \in ob(C)$ be two objects. Denote $C(A,B) = \{ f \in \hom(C)  |  f : A \to B\}$, 
+    i.e. the class containing all morphisms with source $A$ and target $B$.
+    
+
+Note that morphisms are technically binary relations, (if they arent a set then they can be though of as a relation of a class) 
+but this sometimes is not the right way of looking at them.
+This is true in the following example: 
+%exp(def:category):Matmult
+exp:Matrix Multiplication ($Matmult$)
+    Define the category $C$:
+        -) $\ob(C) = \Z_+$
+        -) Define $\hom(C)$ as the set of $C(n,m)= R^{n \times m}$, i.e. all $n$ by $m$ matrices.
+        -) $\cdot$ is defined as matrix multiplication
+        To check this forms a category, note that:
+        -) $\cdot$ is associative because matrix multiplication is associative
+        -) Every object has an identity, namely for any $n \in \ob(C)$ there is the $n\times n$ identity matrix $I_n$, which has the property that
+            for any morphism $f:m \to n$ (i.e. for every $n \times m$ matrix) we have $I_n \circ f = f \circ I_m = f$.
+        Thus $C$ is a category. 
+        
+        Note that while technically $\hom(C)$ consists of relations, (i.e. you have a relation for each $n\times m$ matrix)
+        it is not productive to think of morphisms this way, so you should rather think of morphisms as some new object, i.e. an arrow.

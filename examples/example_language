@@ -1,28 +1,25 @@
-Title: Hello
-Date: Whatever
+Title: Example Language
+Date: 12/29/2022
 =====
-intro: Overload intro title 
-    This is the preview
-    This is the body, separated by newline cause preview is always 1 line
+intro: Overload intro title that is displayed to the user
+    This is the preview text
 
-    # Proof
+    This is the body, separated by newline cause preview is always only 1 line
 
-    This would be the proof or Whatever
+    
 
-    ## Claim 1
-
-    ## Claim 2
 
 
 %def:
-def(semigroup):Monoid 
+def():Monoid 
     this is a definition
 
     -) item 1 This is in item 1
     -) item 2
         This is item 2 as well
-        ok we can just keep going da pythin stunff
-        yesssir yummy
+        this is the same line as above
+
+        This is still item 2 
     This is not in item 2
     -) haha
 
@@ -47,6 +44,14 @@ def(semigroup):Monoid
 exp(experience the moneky zone):
     this is an example
     new line is here
+
+    # Proof
+
+    This would be the proof or something like that
+
+    ## Claim 1
+
+    ## Claim 2
     
 // \ref{1.1/group} renders as "<a href="1.1/group">group</a>"
 
