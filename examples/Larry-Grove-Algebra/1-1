@@ -1,25 +1,24 @@
 %title: Groups, Subgroups, and Homomorphisms. 
 %date:12/22/2022 
-%imports: 
-intro:
-    This note covers chapter 1 section 1 in Larry C. Grove's book Algebra, as well as other things that I have added.
+%imports: bib:algebra
 
-%// everytime we see the phrase "semigroup", we should link to this block.
+intro:
+    This note covers chapter 1 section 1 of \cite{grove_1983}, as well as other things that I have added.
+
+%//Everytime we see the phrase "semigroup", we should link to this block.
 %def:semigroup
 def:Semigroup
     A semigroup $\mathcal G = (G,*)$ is a $\mathcal L_g (= \{*(\cdot, \cdot)\})$-structure such that $*$ is associative.
 
-
-
-%// Putting another link in the () means that the property is tied to any object that is a semigroup.
+%//Putting another link in the () means that the property is tied to any object that is a semigroup.
 %prp(def:semigroup):abelian
 prp:Abelian
     A semigroup $\mathcal G$ is abelian if and only if
     neq:
         \mathcal G \models \forall_{x}\forall_y x * y = y * x
 
-%// This < in the definition notation means that we tell the computer that a monoid is a semigroup. 
-%// The < means that the new object being defined is a subobject of the first one.
+%//This < in the definition notation means that we tell the computer that a monoid is a semigroup. 
+%//The < means that the new object being defined is a subobject of the first one.
 %def(<def:semigroup):monoid
 def:Monoid
     A monoid $\mathcal M = (M,*,1)$ is a semigroup $\mathcal G = (M,*)$ with an identity element $1 \in M$ such that 

@@ -1,8 +1,7 @@
-%title: Category Theory Fundamentals
+%title:
 %date:12/22/2022 
-%imports: 
-%bib[1]: A functional Model theory by Cyrus F. Nourani
-%bib[2]: An Introduction to Category Theory by Harold Simmons
+%imports: bib:category_theory
+
 intro:
     This note covers basic definitions and results of category theory.
 
@@ -61,3 +60,4 @@ exp:Matrix Multiplication ($Matmult$)
         
         Note that while technically $\hom(C)$ consists of relations, (i.e. you have a relation for each $n\times m$ matrix)
         it is not productive to think of morphisms this way, so you should rather think of morphisms as some new object, i.e. an arrow.
+    
